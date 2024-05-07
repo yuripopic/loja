@@ -1,0 +1,271 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 5px; 
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+} 
+
+#titulo{
+    margin-left: 0px;
+}
+
+.logo-search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.search-form {
+    display: flex;
+    margin-left: 10%;
+} 
+
+.search-form input[type="text"] {
+    width: 500px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.search-form button {
+    width: 130px;
+    padding: 10px 0px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+#login-btn {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 300px;
+    height: 380px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product h2 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.product p {
+    margin-top: 5px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos do carrossel */
+.slideshow-container {
+    
+    width: 100%;
+    position: relative;
+    margin: auto;
+
+}
+
+.slideshow {
+    display: none;
+}
+
+
+.slideshow img { 
+    margin-top: 10px;
+    width:100%; 
+    height: 300px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.legenda {
+
+    width: auto;
+    color: #fdfdfd;
+    font-size: 0.9em;
+    padding:5px;
+    position: absolute;
+    bottom: 18%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 10%;
+
+}
+
+.numeracao {
+
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+
+}
+
+.paginacao { 
+  
+    width:100%; 
+    float:left;
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+.dot {
+
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    border-radius: 50px;
+    background-color: #333;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.ativo,
+.dot:hover {
+    background-color: #555;
+}
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*960PX BREAKPOINT - Ajustando o texto para desktop*/
+@media (min-width:60em){
+
+
+    .legenda   { font-size:2em; padding:8px; }
+    .paginacao { margin:20px 0; }
+    .dot       { width:18px; height:18px; }
+}
+
